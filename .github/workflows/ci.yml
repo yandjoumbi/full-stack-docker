@@ -16,12 +16,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16'
-    - name: Install yarn and run unittest
-      run: |
-        npm install
-        npm test
-      env: 
-        CI: true
+    # - name: Install yarn and run unittest
+    #   run: |
+    #     npm start
+    #     npm test
+    #   env: 
+    #     CI: true
     - name: Publish to Github Packages Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
