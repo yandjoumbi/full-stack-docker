@@ -23,7 +23,7 @@ jobs:
     #   env: 
     #     CI: true
     - name: Publish to Github Packages Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v4
       with:
         name: yandjoumbi/full-stack-docker
         registry: docker.pkg.github.com
