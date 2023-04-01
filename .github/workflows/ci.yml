@@ -28,6 +28,6 @@ jobs:
         name: yandjoumbi/full-stack-docker
         registry: yandjoumbi
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.PASSWORD }}
         dockerfile: Dockerfile
         tags: latest
