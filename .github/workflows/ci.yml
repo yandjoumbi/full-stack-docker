@@ -26,7 +26,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@v4
       with:
         name: yandjoumbi/full-stack-docker
-        registry: docker.pkg.github.com
+        registry: yandjoumbi
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.GITHUB_TOKEN }}
         dockerfile: Dockerfile
