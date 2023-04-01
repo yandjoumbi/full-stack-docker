@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on: 
+  push: 
+    branches:
+      - yannick
 
 jobs:
   build:
@@ -9,9 +12,22 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Use Node.js 16
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16'
+    - name: Install yarn and run unittest
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        yarn 
+        yarn test
+      env: 
+        CI: true
+    - name: Publish to Github Packages Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: yandjoumbi/full-stack-docker
+        registry: docker.pkg.github.com
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        dockerfile: Dockerfile
+        tags: latest
