@@ -46,7 +46,8 @@ jobs:
         IMAGE_TAG: lastest
       run: |
         docker build -t $ECR_REGISTRY .
-        docker tag $ECR_REGISTRY:$IMAGE_TAG public.ecr.aws/v6n8a7u8/$ECR_REGISTRY:$IMAGE_TAG 
+        docker tag full-stack-docker-frontend:latest public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest
+        docker tag $ECR_REPOSITORY:$IMAGE_TAG public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG 
         docker push public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG
 
 
