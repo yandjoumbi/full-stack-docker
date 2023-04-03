@@ -48,9 +48,6 @@ jobs:
         docker build -t $ECR_REPOSITORY .
         docker tag $ECR_REPOSITORY:$IMAGE_TAG public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG 
         docker push public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG
-        # docker build -t full-stack-docker-frontend .
-        # docker tag full-stack-docker-frontend:latest public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest1
-        # docker push public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest1
 
 
  
