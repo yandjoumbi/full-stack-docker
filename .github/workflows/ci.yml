@@ -43,15 +43,14 @@ jobs:
         #ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REGISTRY: v6n8a7u8 
         ECR_REPOSITORY: full-stack-docker-frontend
-        IMAGE_TAG: latest   
+        IMAGE_TAG: latest2  
       run: |
-        # docker build -t $ECR_REGISTRY .
-        # docker tag full-stack-docker-frontend:latest public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest
-        # docker tag $ECR_REPOSITORY:$IMAGE_TAG public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG 
-        # docker push public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG
-        docker build -t full-stack-docker-frontend .
-        docker tag full-stack-docker-frontend:latest public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest1
-        docker push public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest1
+        docker build -t $ECR_REGISTRY .
+        docker tag $ECR_REPOSITORY:$IMAGE_TAG public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG 
+        docker push public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG
+        # docker build -t full-stack-docker-frontend .
+        # docker tag full-stack-docker-frontend:latest public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest1
+        # docker push public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest1
 
 
  
