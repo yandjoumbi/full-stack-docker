@@ -43,7 +43,7 @@ jobs:
         #ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REGISTRY: v6n8a7u8 
         ECR_REPOSITORY: full-stack-docker-frontend
-        IMAGE_TAG: lastest
+        IMAGE_TAG: lastest   
       run: |
         docker build -t $ECR_REGISTRY .
         docker tag full-stack-docker-frontend:latest public.ecr.aws/v6n8a7u8/full-stack-docker-frontend:latest
