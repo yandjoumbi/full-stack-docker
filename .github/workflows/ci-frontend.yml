@@ -40,7 +40,6 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       env:
-        #ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REGISTRY: v6n8a7u8 
         ECR_REPOSITORY: full-stack-docker-frontend
         IMAGE_TAG: latest   
