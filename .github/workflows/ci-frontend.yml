@@ -54,7 +54,7 @@ jobs:
         ECR_REPOSITORY: full-stack-docker-backend
         IMAGE_TAG: latest   
       run: |
-        docker build -t $ECR_REPOSITORY /frontend .
+        docker build -t $ECR_REPOSITORY -f frontend/dockerfile .
         docker tag $ECR_REPOSITORY:$IMAGE_TAG public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG 
         docker push public.ecr.aws/v6n8a7u8/$ECR_REPOSITORY:$IMAGE_TAG
 
