@@ -10,7 +10,7 @@ RUN mkdir -p /usr/src/app/backend
 WORKDIR /usr/src/app/backend
 
 # Copy package json and install dependencies
-COPY package*.json ./
+COPY backend/package*.json ./
 RUN npm install
 
 # Copy our app
