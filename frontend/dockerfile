@@ -3,7 +3,7 @@ FROM node:16-alpine
 RUN mkdir -p /usr/src/app
 RUN mkdir -p /usr/src/app/frontend
 WORKDIR /usr/src/app/frontend
-COPY package*.json ./
+COPY frontend/package*.json ./
 RUN npm install
 
 COPY . .
